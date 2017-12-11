@@ -1,0 +1,327 @@
+<html>
+<head>
+	<meta charset="utf-8">
+    <title> DOCUMENTATIONS</title>
+	
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+	
+	
+	<link rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.1.7" type="text/css" media="screen" />
+	<link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+	<link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+	
+	<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+	<script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.1.7"></script>
+	<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+	<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+	<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+</head>
+<body>
+	<header>
+		<nav>
+		<h2>Documentations</h2>
+			<ul class="navbar-nav">
+				<li class="active" id="sass">				
+					<a>SASS</a>
+				</li>
+				<li id="bower">				
+					<a>BOWER</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	
+	
+	<section id="log">
+		<div class="container-fluid">
+			<a class="active" id="sass"><img src="images/sass.png"></a>
+			<a id="bower"><img src="images/bower.png"></a>
+		</div>
+	</section>
+	<section class="all_doc">
+		<div class="doc sass">
+			<h2> SASS </h2>
+			<p class="desc">SASS est un préprocesseur css qui permet d'utiliser des fonctionnalités qui n'existent pas dans CSS, tout comme les variables, les imbrications, l'héritage ... etc</p>
+			<table class="table table-bordered">
+				<tbody>
+					<tr>
+						<th>Instalation</th>
+						<td>
+							<ul class="width50">
+								<li>Installer ruby <a href="https://rubyinstaller.org/downloads/"><img src="images/ruby.png" width="30px"></a></li>
+								<li>Ouvrir la fenetre de commande</li>
+								<li>Lancer la commande <strong>gem install sass</strong> pour installer sass</li>
+							</ul>
+							<a href="images/instalation sass.png" class="fancybox">
+								<button><i class="fa fa-search-plus"></i></button>
+								<img src="images/instalation sass.png">
+							</a>
+						</td>
+					</tr>
+					<tr>
+						<th>Commandes utiles</th>
+						<td>
+							<ul class="width50">
+								<li><strong>sass fichier.scss fichier.css</strong> : la commande permet de compiler le fichier.scss et générer le fichier.css à chaque execution de la commande. </li>
+								<li><strong>sass --watch fichier.scss:fichier.css</strong> : l'execution de la commande permettra de compiler le fichier.scss et générer le fichier.css à chaque modification  du fichier.scss sans executer la commande à chaque reprise</li>
+								<li><strong>sass dossier_scss:dossier_css</strong> la commande permet de compiler tous les fichier.scss du dossier scss et générer tous les fichier.css associés dans le dossier css à chaque execution de la commande. </li>
+								<li><strong>sass --watch  dossier_scss:dossier_css</strong> l'execution de la commande permettra de compiler tout les fichier.scss du dossier scss et générer tous les fichier.css associés dans le dossier css à chaque modification de l'un de ces fichier.scss sans executer la commande à chaque reprise</li>
+							</ul>
+							<a href="images/cmd sass.png" class="fancybox">
+								<button><i class="fa fa-search-plus"></i></button>
+								<img src="images/cmd sass.png">
+							</a>
+						</td>
+					</tr>
+					<tr>
+						<th colspan="2">Bases SASS</th>
+					</tr>
+					<tr>
+						<th> Variables </th>
+						<td>
+							<div>
+								<p><strong>fichier.scss</strong></p>
+								<p>$nom_variable : valeur ;</p>
+								<p>balise / id /classe { </br>
+								   propriété : $nom_variable;</br>
+								  }
+								</p>	
+							</div>
+							<div>
+								<p><strong>fichier.css</strong></p>
+								<p>balise / id /classe { </br>
+									propriété : valeur ;</br>
+								  }
+								</p>	
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th> Referencement selecteur parent </th>
+						<td>
+							<div>
+								<p><strong>fichier.scss</strong></p>
+								<p>$nom_variable : valeur ;</p>
+								<p>$nom_variable2 : valeur2 ;</p>
+								<p>balise / id /classe { </br>
+								   propriété : $nom_variable;</br>
+								   <strong> & </strong>:hover {</br>
+								   propriété : $nom_variable2;</br>
+								   }</br>
+								  }
+								</p>	
+							</div>
+							<div>
+								<p><strong>fichier.css</strong></p>
+								<p>balise / id /classe { </br>
+									propriété : valeur ;</br>
+								  }
+								</p>
+								<p>balise / id /classe:hover { </br>
+									propriété : valeur2 ;</br>
+								  }
+								</p>	
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th> Imbriquations </th>
+						<td>
+							<div>
+								<p><strong>fichier.scss</strong></p>
+								<p>	balise1 / id1 /classe1 { </br>
+									balise2 / id2 /classe2 { </br>
+									propriété : $nom_variable ;</br>
+									propriété : valeur2 ;</br>
+									}</br>
+									}
+								</p>	
+							</div>
+							<div>
+								<p><strong>fichier.css</strong></p>				
+								<p>	balise1 / id1 /classe1 balise2 / id2 /classe2 { </br>
+									propriété : valeur ;</br>
+									propriété : valeur2 ;</br>
+									}</br>
+								</p>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th> Fichiers partielles </th>
+						<td>
+							<p> Des fichiers scss contenant des extraits de css qu'on importera dans d'autres fichiers scss avec la commande <strong>@import</strong></p>
+							<p> Ces fichiers sont enregistés comme suit : _nomfichier.scss ;  le _ permet de savoir que ce fichier est partiel est donc il ne sera pas compilé à un fichier .css</p>
+							<div>
+								<p><strong>_fichierpartial.scss</strong></p>
+								<p>	balise_par / id_par /classe_par { </br>			
+									propriété : $nom_variable ;</br>
+									propriété : valeur2 ;</br>
+									}</br>				
+								</p>
+							</div>	
+							<div>
+								<p><strong>fichier.scss</strong></p>
+								<p>	@import '_fichierpartial';</p> 
+								<p>	balise / id /classe { </br>			
+									propriété : $nom_variable ;</br>
+									propriété : valeur3 ;</br>
+									}</br>				
+								</p>
+							</div>
+							<div>
+								<p><strong>fichier.css</strong></p>
+								<p>	balise_par / id_par /classe_par { </br>			
+									propriété : valeur ;</br>
+									propriété : valeur2 ;</br>
+									}</br>				
+								</p>
+								<p>	balise / id /classe { </br>			
+									propriété : valeur;</br>
+									propriété : valeur3 ;</br>
+									}</br>				
+								</p>
+							</div>			    			    
+						</td>
+					</tr>
+				<tr>
+					<th> Mixins </th>
+					<td>
+						<p> la commande <strong>@mixin</strong> permet de créer  des groupes css d'une même propriété par exemple on l'applique sur la propriété border-radius en ajoutant les differents prefixes -webkit -moz -ms, apres en fait appel à ce group dans la balise voulu </p>
+						<div>
+							<p><strong>fichier.scss</strong></p>
+							<p>
+							<strong>@mixin</strong> border-radius($radius) {</br>
+							-webkit-border-radius: $radius;</br>
+							-moz-border-radius: $radius;</br>
+							-ms-border-radius: $radius;</br>
+							 border-radius: $radius;</br>
+							 }
+							 </p>
+							<p>
+								border-radius() : c'est le nom du groupe</br>
+								$radius : c'est le paramettre qui contiendra la valeur voulue
+							</p>
+
+							<p>balise / id / classe { <strong>@include</strong> border-radius(10px); }</p>
+							
+							<p>	la commande <strong>@include</strong> permet de faire appel au groupe</br>
+								la valeur 10px sera affecter à la variable $radius;
+							</p>
+						</div>	
+						<div>
+							<p><strong>fichier.css</strong></p>
+							<p>balise / id /classe { </br>			
+							  -webkit-border-radius:10px;</br>
+							  -moz-border-radius: 10px;</br>
+							  -ms-border-radius: 10px;</br>
+							  border-radius: 10px;</br>
+							  }				
+							</p>			
+						</div>			    			    
+					</td>
+				</tr>
+				<tr>
+					<th> Heritages </th>
+					<td>
+						<p>Le SASS permet de créer un ensemble de propriétés dont d'autres blocs peuvent hériter en utilisant la commande <strong>@extend</strong></p>
+						<div>
+							<p><strong>fichier.scss</strong></p>
+							<p>					
+							  balise1/id1/classe1 {</br>
+							  propriété: valeur;</br>
+							  }</br>
+							  balise2/id2/classe2 {</br>
+							  <strong>@extend</strong> balise1/id1/classe1;</br>
+							  propriété2: valeur2;</br>
+							  }
+							</p>
+						</div>	
+						<div>
+							<p><strong>fichier.css</strong></p>
+							<p>balise1/id1/classe1, balise2/id2/classe2 {</br>
+								propriété: valeur;</br>
+							  }</br>
+							  balise2/id2/classe2 {</br>
+							  propriété2: valeur2;</br>
+							 }
+							</p>		
+						</div>	
+						<div>
+							<p><strong>Exemple</strong></p>
+							<p><button class="button button-primary">primary</button></p>
+							<p><button class="button button-danger">danger</button></p>
+							<p><button class="button button-sucess">sucess</button></p>
+						</div>			    				    
+					</td>
+				</tr>
+				<tr>
+					<th> Operateurs </th>
+					<td>
+						<p>Le SASS permet d'affecter une valeur en pourcentage à une propriété d'un block en ce basant sur des valeurs en pixels en utilisant des operateur(+, -, *, / )</strong></p>
+						<div>
+							<p><strong>fichier.scss</strong></p>
+							<p>					
+							  balise/id/classe {</br>
+							  width: 600px / 960px * 100%;</br>
+							  }
+							</p>
+							<p>Dans cette exemple on a affecter à width la valeur</p>
+							<p>	de la largeur en pourcentage d'un block ayant une largeur de 600px
+							<p>	contenu dans un block parent ayant une latgeur de 960px; </p>
+						</div>	
+						<div>
+							<p><strong>fichier.css</strong></p>
+							<p>balise/id/classe {</br>
+							  width: 62.5%;</br>
+							  }
+							</p>		
+						</div>			    				    
+					</td>
+				</tr>
+
+			</tbody>
+			</table>
+		</div>
+		<div class="doc bower" style="display:none">
+			<h2> BOWER (Gestionnaire des dépendances) </h2>
+			<p class="desc"> BOWER permet d'installer les derniéres versions des modules d'un projet avec des simples lignes de commandes dans notre fenêtre de commande. </p>
+			<table class="table table-bordered">
+				<tbody>
+					<tr>
+						<th>Instalation</th>
+						<td>
+							<ul class="width50">
+								<li>Installer NODE.JS <a href="https://nodejs.org/en/"><img src="images/node.png" width="30px"></a></li>
+								<li>Installer GIT <a href="https://git-scm.com/download/win"><img src="images/git.png" width="30px"></a></li>
+								<li>Ouvrir la fenêtre de commande</li>
+								<li>Lancer la commande <strong>npm install -g bower</strong> pour installer bower</li>
+								<li>Lancer la commande <strong>bower install nom_module</strong> pour installer la derniére version de ce module</li>
+								<li>Lancer la commande <strong>bower update nom_module</strong> pour mettre à jour la version existante de ce module</li>
+								<li>cette verison sera telecharger dans le dossier <strong>bower_components</strong> de notre projet </li>
+								<li>les information concernat cette verison seront enregistrées dans le fichier bower.json qui se trouve dans le dossier <strong>bower_components/nom_module</strong> de notre projet </li>
+								
+							</ul>
+							<a href="images/bower_1.png" class="fancybox bower" rel="bower">
+								<button><i class="fa fa-search-plus"></i></button>
+								<img src="images/bower_1.png">
+							</a>
+							<a href="images/bower_2.png" class="fancybox bower" rel="bower">
+								<button><i class="fa fa-search-plus"></i></button>
+								<img src="images/bower_2.png">
+							</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	<section>
+
+	<script src="js/main.js"></script>
+	
+	
+</body>
+</html>

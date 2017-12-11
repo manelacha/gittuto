@@ -1,0 +1,122 @@
+header {
+  float: left !important;
+  width: 100%; }
+  header nav {
+    float: left !important;
+    width: 100%;
+    background: #003366;
+    position: relative; }
+    header nav h2 {
+      color: #fff !important;
+      padding: 10px 20px;
+      float: left;
+      margin: 0; }
+    header nav ul {
+      display: initial !important;
+      float: right !important;
+      margin-right: 20px;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      list-style: none; }
+      header nav ul li {
+        float: left !important;
+        padding: 10px 20px;
+        margin: 0 5px;
+        cursor: pointer; }
+        header nav ul li a {
+          color: #fff !important; }
+        header nav ul li:hover, header nav ul li.active {
+          background: #f1f1f1; }
+          header nav ul li:hover a, header nav ul li.active a {
+            color: #003366 !important;
+            text-decoration: none; }
+
+#log {
+  float: left;
+  width: 120px;
+  margin-top: 50px; }
+  #log img {
+    margin: 10px;
+    width: calc(100% - 20px); }
+  #log a {
+    width: 100%;
+    float: left;
+    margin: 10px 0;
+    cursor: pointer; }
+    #log a:hover, #log a.active {
+      background: #f1f1f1; }
+
+.all_doc {
+  width: calc(100% - 150px);
+  float: left; }
+  .all_doc .doc {
+    width: 100%;
+    float: left;
+    margin-top: 50px;
+    border-left: 1px solid #003366; }
+    .all_doc .doc h2 {
+      position: relative;
+      margin: 10px 20px;
+      color: #003366; }
+    .all_doc .doc h2:before {
+      content: '';
+      position: absolute;
+      border-bottom: #003366 solid 2px;
+      top: 0;
+      right: 95%;
+      left: 0px;
+      bottom: 0; }
+    .all_doc .doc p.desc {
+      float: left;
+      padding-left: 20px; }
+    .all_doc .doc table {
+      width: calc(100% - 40px) !important;
+      margin: 10px 20px; }
+      .all_doc .doc table ul.width50 {
+        float: left;
+        width: 50%; }
+      .all_doc .doc table a.fancybox {
+        float: right;
+        width: 50%;
+        position: relative; }
+        .all_doc .doc table a.fancybox button {
+          position: absolute;
+          z-index: 2;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          cursor: pointer; }
+        .all_doc .doc table a.fancybox img {
+          width: 100%;
+          position: relative;
+          z-index: 1; }
+        .all_doc .doc table a.fancybox.bower {
+          width: 25%; }
+      .all_doc .doc table div {
+        float: left;
+        padding: 0 10px; }
+
+.border-radius-button, header nav ul li:hover, header nav ul li.active, #log a, .button-primary, .button-danger, .button-sucess {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px; }
+
+.button, .button-primary, .button-danger, .button-sucess {
+  font-size: 10pt;
+  padding: 10px 20px;
+  color: #333;
+  background: transparent; }
+
+.button-primary {
+  border: 1px solid blue; }
+
+.button-danger {
+  border: 1px solid red; }
+
+.button-sucess {
+  border: 1px solid green; }
+
+/*# sourceMappingURL=main.css.map */
